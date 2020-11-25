@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "heroku-postbuild": "npm run build --prefix appFrontend",
+    "install": "npm --prefix appBackend install appBackend && npm --prefix appFrontend install appFrontend",
+    "dev:backend": "npm install --prefix appBackend start",
+    "dev:frontend": "npm install --prefix appFrontend start",
+    "sequelize": "npm run --prefix appBackend sequelize",
+    "sequelize-cli": "npm run --prefix appBackend sequelize-cli",
+    "start": "npm start --prefix appBackend"
   },
   "keywords": [],
   "author": "",
